@@ -12,7 +12,8 @@
 		"ax5ui",
 		"plugin",
 		"bootstrap jQuery plugins",
-		"ax5core"
+		"ax5core",
+		"javascript ui"
 	],
 	"dependencies": {
 		"jquery": "^1.11.0"

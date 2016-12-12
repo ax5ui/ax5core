@@ -524,8 +524,10 @@
         if (isArray(value)) {
             for (var j = 0, valueLength = value.length; j < valueLength; ++j) {
                 if(value[j]) {
-                    value[j]['@i'] = j;
-                    value[j]['@first'] = (j === 0);
+                    if(typeof value[j] === 'object') {
+                        value[j]['@i'] = j;
+                        value[j]['@first'] = (j === 0);
+                    }
                     buffer += this.renderTokens(token[4], context.push(value[j]), partials, originalTemplate);
                 }
             }
